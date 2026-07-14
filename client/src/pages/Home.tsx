@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import FeatureCard from "../components/FeatureCard";
 
 function Home() {
   return (
@@ -66,6 +67,41 @@ function Home() {
           </div>
         </div>
       </section>
+      <section className="max-w-7xl mx-auto px-8 py-24">
+
+  <h2 className="text-5xl font-bold text-center">
+    Why Choose
+    <span className="text-cyan-400"> InterviewAI?</span>
+  </h2>
+
+  <p className="text-center text-gray-400 mt-5 max-w-2xl mx-auto">
+    Everything you need to prepare for technical interviews,
+    HR interviews and placement drives.
+  </p>
+
+  <div className="grid md:grid-cols-3 gap-8 mt-20">
+
+    <FeatureCard
+      icon="🤖"
+      title="AI Interviewer"
+      description="Practice with an AI interviewer that adapts questions based on your answers."
+    />
+
+    <FeatureCard
+      icon="📊"
+      title="Performance Analytics"
+      description="Receive detailed reports, scores and improvement suggestions after every interview."
+    />
+
+    <FeatureCard
+      icon="🎯"
+      title="Placement Ready"
+      description="Prepare for TCS, Infosys, Accenture, Google, Amazon and many more companies."
+    />
+
+  </div>
+
+</section>
     </div>
   );
 }
