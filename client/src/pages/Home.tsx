@@ -4,104 +4,101 @@ import FeatureCard from "../components/FeatureCard";
 function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
+      {/* Navbar */}
       <Navbar />
 
-      <section className="max-w-7xl mx-auto px-8 py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
+      {/* Hero Section */}
+      <section className="max-w-7xl mx-auto px-8 py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left Side */}
-        <div className="flex-1">
-
-          <span className="inline-block bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium">
+        <div className="lg:w-1/2">
+          <span className="bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm">
             🚀 AI Powered Interview Preparation
           </span>
 
-          <h1 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mt-6 leading-tight">
             Ace Your
             <br />
-            Dream Job
-            <br />
-            <span className="text-cyan-400">Interview</span>
+            <span className="text-cyan-400">Dream Job Interview</span>
           </h1>
 
-          <p className="mt-8 text-gray-400 text-lg leading-8 max-w-xl">
-            Practice technical and HR interviews with AI. Receive instant
-            feedback, improve your confidence, and track your progress with a
-            modern AI-powered interview platform.
+          <p className="text-slate-300 text-lg mt-6">
+            Practice technical and HR interviews with AI, receive instant
+            feedback, improve your confidence, and get placement-ready for top
+            companies.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-5">
-            <button className="bg-cyan-400 text-black px-8 py-4 rounded-xl font-bold hover:bg-cyan-300 transition">
+          <div className="flex gap-4 mt-8">
+            <button className="bg-cyan-400 text-slate-900 px-6 py-3 rounded-xl font-semibold hover:bg-cyan-300 transition">
               Start Interview
             </button>
 
-            <button className="border border-slate-700 px-8 py-4 rounded-xl hover:bg-slate-800 transition">
+            <button className="border border-cyan-400 px-6 py-3 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition">
               Learn More
             </button>
           </div>
 
-          <div className="mt-12 flex gap-10">
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-6 mt-12">
             <div>
               <h2 className="text-3xl font-bold text-cyan-400">10K+</h2>
-              <p className="text-gray-400">Practice Interviews</p>
+              <p className="text-slate-400">Practice Interviews</p>
             </div>
 
             <div>
               <h2 className="text-3xl font-bold text-cyan-400">95%</h2>
-              <p className="text-gray-400">Success Rate</p>
+              <p className="text-slate-400">Success Rate</p>
             </div>
 
             <div>
               <h2 className="text-3xl font-bold text-cyan-400">24/7</h2>
-              <p className="text-gray-400">AI Available</p>
+              <p className="text-slate-400">AI Available</p>
             </div>
           </div>
         </div>
 
         {/* Right Side */}
-        <div className="flex-1 flex justify-center">
-          <div className="relative">
-            <div className="w-[420px] h-[420px] rounded-full bg-cyan-500/20 flex items-center justify-center">
-              <div className="w-[320px] h-[320px] rounded-full bg-cyan-400/30 flex items-center justify-center">
-                <span className="text-[120px]">🤖</span>
+        <div className="lg:w-1/2 flex justify-center">
+          <div className="w-80 h-80 rounded-full bg-cyan-400/20 flex items-center justify-center">
+            <div className="w-60 h-60 rounded-full bg-cyan-400/30 flex items-center justify-center">
+              <div className="w-40 h-40 rounded-full bg-cyan-400 flex items-center justify-center text-6xl">
+                🤖
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="max-w-7xl mx-auto px-8 py-24">
 
-  <h2 className="text-5xl font-bold text-center">
-    Why Choose
-    <span className="text-cyan-400"> InterviewAI?</span>
-  </h2>
+      {/* Features Section */}
+      <section className="max-w-7xl mx-auto px-8 py-20">
+        <h2 className="text-4xl font-bold text-center">
+          Why Choose{" "}
+          <span className="text-cyan-400">InterviewAI?</span>
+        </h2>
 
-  <p className="text-center text-gray-400 mt-5 max-w-2xl mx-auto">
-    Everything you need to prepare for technical interviews,
-    HR interviews and placement drives.
-  </p>
+        <p className="text-center text-slate-400 mt-4">
+          Everything you need to prepare for your dream job interviews.
+        </p>
 
-  <div className="grid md:grid-cols-3 gap-8 mt-20">
+        <div className="grid md:grid-cols-3 gap-8 mt-14">
+          <FeatureCard
+            icon="🤖"
+            title="AI Interviewer"
+            description="Practice realistic HR and technical interviews with AI."
+          />
 
-    <FeatureCard
-      icon="🤖"
-      title="AI Interviewer"
-      description="Practice with an AI interviewer that adapts questions based on your answers."
-    />
+          <FeatureCard
+            icon="📊"
+            title="Performance Analytics"
+            description="Receive detailed feedback and improve after every interview."
+          />
 
-    <FeatureCard
-      icon="📊"
-      title="Performance Analytics"
-      description="Receive detailed reports, scores and improvement suggestions after every interview."
-    />
-
-    <FeatureCard
-      icon="🎯"
-      title="Placement Ready"
-      description="Prepare for TCS, Infosys, Accenture, Google, Amazon and many more companies."
-    />
-
-  </div>
-
-</section>
+          <FeatureCard
+            icon="🎯"
+            title="Placement Ready"
+            description="Prepare for top companies like TCS, Infosys, Accenture, Google, Amazon and more."
+          />
+        </div>
+      </section>
     </div>
   );
 }
